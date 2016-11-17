@@ -31,6 +31,6 @@ print "\n Prints List where i have added two dictionarys to that list:\n"
 print dictlist
 
 print "\nPrinting 1 from there first list"
-print harjdict['inception']
+print harjdict['inception'][0]
 
 
