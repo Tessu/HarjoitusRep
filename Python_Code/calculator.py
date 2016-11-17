@@ -27,8 +27,19 @@ if argslen > 3:
 	if operation == 5:
 		modulo = num1 % num2
 		print "Result from modulo operation is {}".format(modulo)
+	if operation == 6:
+		add=num1 + num2
+		print "Result from Add operation is {}".format(add)
+		substract = num1 - num2
+		print "Result from substract operation is {}".format(substract)
+		multiply= num1 * num2
+		print "Result from multiply operation is {}".format(multiply)
+		divide = num1 / num2
+		print "Result from divide operation is {}".format(divide)
+		modulo = num1 % num2
+		print "Result from modulo operation is {}".format(modulo)
 	else:
 		print "Give propper operation number"
 else:
-	print "Give 2 numbers and operation number from 1-5 to excecute mathematical" \
-	 "operations\n1:Add\n2:Substract\n3:Multiply\n4:Divide\n5:Modulo"
+	print "Give 2 numbers and operation number from 1-6 to excecute mathematical" \
+	 "operations\n1:Add\n2:Substract\n3:Multiply\n4:Divide\n5:Modulo\n6:All of above"
