@@ -12,6 +12,11 @@ input2 = float(input2)
 while input2<1 or input2>2:
 	print"please input correct option"
 	input2 = raw_input("Choose Currency: ")
+	input2=float(input2)
+	if input2 == 1 or input2 == 2:
+		break
+	else:
+		continue
 
 if input2 == 1:
 	input1*=1.06
