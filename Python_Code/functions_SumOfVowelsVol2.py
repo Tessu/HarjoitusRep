@@ -29,7 +29,7 @@ def get_vowels_amount():
 			n+=1
 		else:
 			n+=1
-	return vowels_amount
+	print "Amount of vowels in the given word is: {}".format(vowels_amount)
 
 
 def get_word():
@@ -45,6 +45,5 @@ def get_wordlength():
 
 
 if __name__ == "__main__":
-	vowels_amount = get_vowels_amount()
-	print "Amount of vowels in the given word is: {}".format(vowels_amount)
-
+	get_vowels_amount()
+	
