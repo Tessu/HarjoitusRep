@@ -37,3 +37,6 @@ if n==listlen:
 
 else:
 	print "Word is not a palindrome"
+#The easy way, not the dumb way
+#if list(plaindrome) == list(reversed(plaindrome)):
+#	print "is plaindrome!"
