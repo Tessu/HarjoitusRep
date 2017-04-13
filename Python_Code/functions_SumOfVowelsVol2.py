@@ -43,8 +43,8 @@ def get_wordlength():
 
 
 def get_vowel_ascii(character):
-		asc = ord(character)
-		return asc
+		ascii_value = ord(character)
+		return ascii_value
 
 def sum_vowel_ascii():
 	ascii_sum = 0
