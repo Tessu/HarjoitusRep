@@ -7,8 +7,12 @@ class Recipe(object):
 		self.ingredient1 = ingredient1
 		self.ingredient2 = ingredient2
 		self.ingredient3 = ingredient3
+	def get_ingredients(self):
+		return [self.keyword, self.ingredient1, self.ingredient2, self.ingredient3]
+
 	def __repr__(self):
-		return ", ".join(self.keyword, self.ingredient1, self.ingredient2, self.ingredient3)
+		return ", ".join([self.keyword, self.ingredient1, self.ingredient2, self.ingredient3])
+
 
 recipe1 = Recipe("chickensoup", "chicken", "carrot", "potatoes")
 recipe2 = Recipe("vegetablesoup", "carrot", "potatoes", "cucumber")
@@ -50,41 +54,57 @@ class RecipeManager(object):
 		self.chicken_dishes.append(dish)
 
 	def get_soups(self):
-		return soup_dishes
+		return self.soup_dishes
 	def get_beefs(self):
-		return beef_dishes
+		return self.beef_dishes
 	def get_chickens(self):
-		return chicken_dishes
+		return self.chicken_dishes
 	def get_vegetables(self):
-		return vegetable_dishes
+		return self.vegetable_dishes
 	def get_desserts(self):
-		return desserts
+		return self.desserts
+	def get_uncategorized(self):
+		return self.uncategorized_dishes
 
 
 
 	def add_recipe(self):
+		
 		for recipe in self.uncategorized_dishes:
-			if "beef" in recipe:
-				recipemanager.add_beef_dish(recipe)
-			if "vegetable" in recipe:
-				recipemanager.add_vegetable_dish(recipe)
-			if "dessert" in recipe:
-				recipemanager.add_dessert(recipe)
-			if "soup" in recipe:
-				recipemanager.add_soup(recipe)
-			if "chicken" in recipe:
-				recipemanager.add_chicken_dish(recipe)
+			if "beef" in recipe.get_ingredients():
+				self.add_beef_dish(recipe)
+			if "vegetable" in recipe.get_ingredients():
+				self.add_vegetable_dish(recipe)
+			if "dessert" in recipe.get_ingredients():
+				self.add_dessert(recipe)
+			if "soup" in recipe.get_ingredients():
+				self.add_soup(recipe)
+			if "chicken" in recipe.get_ingredients():
+				self.add_chicken_dish(recipe)
 
 
 
 
 
 recipemanager = RecipeManager()
+
+
 recipemanager.add_recipe_uncategorized(recipe1)
 recipemanager.add_recipe_uncategorized(recipe2)
 recipemanager.add_recipe_uncategorized(recipe3)
 recipemanager.add_recipe_uncategorized(recipe4)
 recipemanager.add_recipe_uncategorized(recipe5)
 
+recipemanager.add_recipe()
 
-print recipemanager.get_desserts
+print recipemanager.get_desserts()
+print ""
+print recipemanager.get_chickens()
+print ""
+print recipemanager.get_vegetables()
+print ""
+print recipemanager.get_beefs()
+print ""
+print recipemanager.get_soups()
+print ""
+print recipemanager.get_uncategorized()
