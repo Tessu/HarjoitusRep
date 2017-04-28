@@ -14,8 +14,8 @@ class Recipe(object):
 		return ", ".join([self.keyword, self.ingredient1, self.ingredient2, self.ingredient3])
 
 
-recipe1 = Recipe("chickensoup", "chicken", "carrot", "potatoes")
-recipe2 = Recipe("vegetablesoup", "carrot", "potatoes", "cucumber")
+recipe1 = Recipe("soup", "chicken", "carrot", "potatoes")
+recipe2 = Recipe("soup", "carrot", "vegetable", "cucumber")
 recipe3 = Recipe("beefstew", "beef", "mushroom", "onion")
 recipe4 = Recipe("dessert", "chocolate", "flour", "sugar")
 recipe5 = Recipe("pizza", "beef", "tuna", "pineapple")
